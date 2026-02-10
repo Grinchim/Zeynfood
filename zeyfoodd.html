@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeyn Food MMC | Yagusha - Dadına Doyulmaz Şirniyyatlar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #8b0000;
+            --secondary-color: #b22222;
+            --accent-color: #fff0f0;
+            --dark-color: #660000;
+            --light-color: #fffaf0;
+            --text-color: #333;
+            --gray-color: #f9f9f9;
+            --border-color: #e0e0e0;
+            --gold-color: #d4af37;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            background-color: var(--light-color);
+            line-height: 1.6;
+        }
+        
+        /* Üst Navbar */
+        .top-nav {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 0.8rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .top-nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+        
+        .contact-info span {
+            margin-right: 1.5rem;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: var(--gold-color);
+        }
+        
+        .contact-info i {
+            margin-right: 0.5rem;
+            color: var(--gold-color);
+        }
+        
+        .social-links a {
+            color: white;
+            margin-left: 1rem;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--gold-color);
+        }
+        
+        /* Əsas Navbar */
+        .main-nav {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+            font-weight: 300;
+        }
+        
+        .tagline {
+            color: var(--gold-color);
+            font-style: italic;
+            margin-left: 1rem;
+            font-size: 1.1rem;
+            border-left: 2px solid var(--gold-color);
+            padding-left: 1rem;
+            line-height: 1.2;
+        }
+        
+        .tagline strong {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        /* Hero Bölməsi */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 1rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .hero h2 span {
+            color: var(--gold-color);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #f0f0f0;
+        }
+        
+        .brand-name {
+            font-size: 3rem;
+            color: var(--gold-color);
+            font-weight: bold;
+            display: block;
+            margin-top: 0.5rem;
+            margin-bottom: 0.1rem;
+            letter-spacing: 1px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: white;
+            font-style: italic;
+            margin-top: 0;
+        }
+        
+        /* Haqqımızda */
+        .about {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            background-color: var(--accent-color);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-image: url('https://via.placeholder.com/600x400/8b0000/ffffff?text=YAGUSHA+LOGO');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .about-content h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--gold-color);
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .mission, .vision {
+            background-color: var(--gray-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .mission h3, .vision h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .mission h3 i, .vision h3 i {
+            margin-right: 0.5rem;
+            color: var(--gold-color);
+        }
+        
+        /* Məhsullar */
+        .products {
+            background-color: var(--gray-color);
+            padding: 4rem 1rem;
+        }
+        
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--gold-color);
+        }
+        
+        .category {
+            margin-bottom: 4rem;
+        }
+        
+        .category-title {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .category-title i {
+            margin-right: 1rem;
+            color: var(--gold-color);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .product-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .product-name {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .product-name .brand {
+            color: var(--gold-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 0.2rem;
+        }
+        
+        /* Əlaqə */
+        .contact {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-info {
+            background-color: var(--accent-color);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-detail {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-detail i {
+            color: var(--gold-color);
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            margin-top: 0.2rem;
+        }
+        
+        .contact-detail h4 {
+            color: var(--dark-color);
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-detail a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .contact-detail a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .map-placeholder {
+            background-color: var(--gray-color);
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 2rem;
+            flex-direction: column;
+        }
+        
+        .map-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 1rem 1rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        
+        .footer-logo h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo span {
+            color: var(--gold-color);
+        }
+        
+        .footer-tagline {
+            font-size: 1.5rem;
+            color: var(--gold-color);
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        
+        .footer-links h3, .footer-contact h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            color: var(--gold-color);
+        }
+        
+        .footer-links h3::after, .footer-contact h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: white;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold-color);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact a {
+            color: #f0f0f0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-contact a:hover {
+            color: var(--gold-color);
+            text-decoration: underline;
+        }
+        
+        .footer-contact i {
+            margin-right: 0.8rem;
+            color: var(--gold-color);
+            min-width: 20px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-container, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .top-nav {
+                display: none;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .tagline {
+                margin-left: 0.5rem;
+                padding-left: 0.5rem;
+                font-size: 1rem;
+            }
+            
+            .tagline strong {
+                font-size: 1.1rem;
+            }
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        @media (max-width: 992px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 280px;
+            height: 100%;
+            background-color: white;
+            z-index: 2000;
+            padding: 2rem;
+            transition: left 0.3s;
+            overflow-y: auto;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-menu.active {
+            left: 0;
+        }
+        
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .mobile-menu-header h2 {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-links {
+            list-style: none;
+        }
+        
+        .mobile-menu-links li {
+            margin-bottom: 1.5rem;
+        }
+        
+        .mobile-menu-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: block;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--accent-color);
+        }
+        
+        .mobile-menu-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-contact {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--accent-color);
+        }
+        
+        .mobile-menu-contact a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .mobile-menu-contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1500;
+            display: none;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Üst Navbar -->
+    <div class="top-nav">
+        <div class="top-nav-container">
+            <div class="contact-info">
+                <span>
+                    <a href="tel:+994993996998">
+                        <i class="fas fa-phone"></i> (+994 99) 399 6998
+                    </a>
+                </span>
+                <span>
+                    <a href="tel:+994993996698">
+                        <i class="fas fa-phone"></i> (+994 99) 399 6698
+                    </a>
+                </span>
+                <span>
+                    <a href="mailto:Office@zeynfood.az">
+                        <i class="fas fa-envelope"></i> Office@zeynfood.az
+                    </a>
+                </span>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/zeynfood_mmc?igsh=MXUxdDhlOGozYjYzOQ==" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/994993996998" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Əsas Navbar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Zeyn<span>Food</span></h1>
+                <div class="tagline"><strong>"Yagusha"</strong> - Dadına doyulmaz</div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#" class="active">Ana Səhifə</a></li>
+                <li><a href="#about">Haqqımızda</a></li>
+                <li><a href="#products">Məhsullar</a></li>
+                <li><a href="#contact">Əlaqə</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>ZeynFood</h2>
+            <button class="close-mobile-menu" id="close-mobile-menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu-links">
+            <li><a href="#" class="active">Ana Səhifə</a></li>
+            <li><a href="#about">Haqqımızda</a></li>
+            <li><a href="#products">Məhsullar</a></li>
+            <li><a href="#contact">Əlaqə</a></li>
+        </ul>
+        <div class="mobile-menu-contact">
+            <p><i class="fas fa-phone"></i> 
+                <a href="tel:+994993996998">(+994 99) 399 6998</a>
+            </p>
+            <p><i class="fas fa-phone"></i> 
+                <a href="tel:+994993996698">(+994 99) 399 6698</a>
+            </p>
+            <p><i class="fas fa-envelope"></i> 
+                <a href="mailto:Office@zeynfood.az">Office@zeynfood.az</a>
+            </p>
+        </div>
+    </div>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Hero Bölməsi -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Təsdiqlənmiş <span>inqrediyentlərdən</span> əsl ləzzət</h2>
+            <p>"Zeyn Food" MMC - nin istehsal etdiyi şirniyyat məhsullarını dadmaqla günün ən gözəl anını yaşayın.</p>
+            <div class="brand-name">YAGUSHA</div>
+            <p class="hero-subtitle">Dadına doyulmaz...</p>
+        </div>
+    </section>
+    
+    <!-- Haqqımızda -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <!-- Logo burada görünəcək -->
+            </div>
+            <div class="about-content">
+                <h2>Haqqımızda</h2>
+                <p><strong>"Zeyn Food" MMC</strong> – Azərbaycanda keyfiyyətli peçenye, keks, pryanik, kurabiyə və digər un məmulatlarının istehsalı ilə məşğul olan yenilikçi qida şirkətidir.</p>
+                
+                <p>Məhsullarımız <strong>"Yagusha"</strong> əmtəə nişanı altında müasir texnoloji avadanlıqlarda, yüksək gigiyena standartlarına uyğun istehsal olunur. Məhsullarımızda istifadə etdiyimiz xammal seçimi ən yüksək standartlara əsaslanır. Bu da məhsullarınızın dadının davamlılığını və yüksək keyfiyyətini təmin edir.</p>
+                
+                <div class="mission-vision">
+                    <div class="mission">
+                        <h3><i class="fas fa-bullseye"></i> Məqsədimiz</h3>
+                        <p>Həm ölkə daxilində, həm də xarici bazarlarda rəqabətədavamlı, sağlam, dadı, təhlükəsizliyi və keyfiyyəti ilə seçilən məhsulların istehsalıdır.</p>
+                    </div>
+                    
+                    <div class="vision">
+                        <h3><i class="fas fa-eye"></i> Missiyamız</h3>
+                        <p>Balacadan böyüyə hər kəsin sevdiyi, ailə süfrələrində yer alan, dadı ilə yadda qalan innovativ məhsullar yaratmaqdır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Məhsullar -->
+    <section class="products" id="products">
+        <div class="products-container">
+            <h2 class="section-title">Məhsullarımız</h2>
+            
+            <!-- Peçenyelər -->
+            <div class="category">
+                <h3 class="category-title"><i class="fas fa-cookie"></i> Peçenyelər</h3>
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-cookie-bite"></i>
+                        </div>
+                        <div class="product-name">
+                            "Soffi" (assorti)
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-cookie"></i>
+                        </div>
+                        <div class="product-name">
+                            "Creo"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-name">
+                            "Yaquşa"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-candy-cane"></i>
+                        </div>
+                        <div class="product-name">
+                            "Şəkərli"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="product-name">
+                            "Bakı" (cemli)
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-lemon"></i>
+                        </div>
+                        <div class="product-name">
+                            "Portağal dadlı"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-peanut"></i>
+                        </div>
+                        <div class="product-name">
+                            "Fındıq formalı"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="product-name">
+                            "Yulaflı-darçınlı"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-pretzel"></i>
+                        </div>
+                        <div class="product-name">
+                            "Burma"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-ribbon"></i>
+                        </div>
+                        <div class="product-name">
+                            "Bantik" (cemli)
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Biskvitlər -->
+            <div class="category">
+                <h3 class="category-title"><i class="fas fa-birthday-cake"></i> Biskvitlər</h3>
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-grape"></i>
+                        </div>
+                        <div class="product-name">
+                            "Kişmişli Keks"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div class="product-name">
+                            "Meyvəli Keks"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-cupcake"></i>
+                        </div>
+                        <div class="product-name">
+                            "Muffin sadə"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                        <div class="product-name">
+                            "Muffin kakaolu"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                        <div class="product-name">
+                            "Muffin şokoladlı"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="product-name">
+                            "Yer Kürəsi" (kremli)
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pryaniklər -->
+            <div class="category">
+                <h3 class="category-title"><i class="fas fa-cube"></i> Pryaniklər</h3>
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <div class="product-name">
+                            Şokoladlı Pryanik "Nuit" (kakaolu)
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="product-name">
+                            Şokoladlı Pryanik "Lumi" (bəyaz)
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kökələr -->
+            <div class="category">
+                <h3 class="category-title"><i class="fas fa-bread-slice"></i> Kökələr</h3>
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-ice-cream"></i>
+                        </div>
+                        <div class="product-name">
+                            "Kökə Vanilli"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">
+                            <i class="fas fa-jar"></i>
+                        </div>
+                        <div class="product-name">
+                            "Kökə Cemli"
+                            <span class="brand">Yagusha</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Əlaqə -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Əlaqə</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Bizimlə Əlaqə</h3>
+                
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Telefon</h4>
+                        <p><a href="tel:+994993996998">(+994 99) 399 6998</a></p>
+                        <p><a href="tel:+994993996698">(+994 99) 399 6698</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:Office@zeynfood.az">Office@zeynfood.az</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Ünvan</h4>
+                        <p>Bakı şəhəri, Binəqədi rayonu,<br>Biləcəri ŞTQ, Yeni Massiv</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Bakı şəhəri, Binəqədi rayonu<br>Biləcəri ŞTQ, Yeni Massiv</p>
+                <p style="font-size: 1rem; margin-top: 1rem; color: var(--secondary-color);">
+                    <i class="fas fa-info-circle"></i> Burada həqiqi xəritə göstərilə bilər
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Zeyn<span>Food</span></h2>
+                <p>"Zeyn Food" MMC – Azərbaycanda keyfiyyətli un məmulatlarının istehsalı ilə məşğul olan yenilikçi qida şirkətidir.</p>
+                <div class="footer-tagline">Dadına doyulmaz...</div>
+            </div>
